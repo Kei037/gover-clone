@@ -1,41 +1,81 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 html,body { height: 100%; }
-body { background: #3498db; }
+ul,li { list-style: none; }
+body {
+  color: #555;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
 a { color: #666; }
 
-.box {
-  position: absolute;
-  background: #10ebca;
-  border-radius: 100%;
-  width: 10px;
-  height: 10px;
+#header {
+  width: 100%;
 }
 
-.box:nth-child(1) {
-  width: 50px;
-  height: 50px;
-  left: 500px;
-  background: #1076eb;
+#header-top {
+  display: inline-block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.box:nth-child(2) {
-  width: 250px;
-  height: 250px;
-  left: 10px;
-  background: #10ebca;
+.header-top-inner {
+  background: red;
+  width: 1400px;
+  height: 46px;
+  line-height: 2.8;
+  margin: 0 auto;
 }
 
-.box:nth-child(3) {
+.around-st, .family-site, .sign-lang {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.around-st {
+  width: 320px;
+  height: 46px;
+}
+
+.around-st ul {
+  overflow: hidden;
+}
+
+.around-st li {
+  float: left;
+  margin: 0 12px;
+}
+
+.around-st li:nth-child(1) {
+  margin-left: 0;
+}
+
+.family-site {
+  /* display: inline-block; */
+  width: 400px;
+  height: 46px;
+}
+
+.family-site a {
   width: 100px;
-  height: 100px;
-  top: 500px;
-  background: #8c10eb;
+  height: 46px;
 }
 
-.box:nth-child(4) {
-  width: 20px;
-  height: 20px;
-  left: 200px;
-  top: 500px;
-  background: #eb10c6;
+.sign-lang {
+  position: relative;
+  width: 630px;
+  height: 46px;
+  float: right;
+}
+
+.weather, .signup, .language, .font-size, .green-box {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.weather {
+  width: 220px;
+  margin-left: 0;
 }
