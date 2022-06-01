@@ -7,26 +7,37 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-family: 'Noto Sans KR', sans-serif;
+  background: #f1f1f1;
 }
 a { color: #666; }
 
+.font-big {
+  font-size: 20px;
+}
+
 #header {
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
 }
 
 #header-top {
   display: inline-block;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  border-bottom: 1px solid #e5e7ee;
 }
 
 .header-top-inner {
-  background: red;
   width: 1400px;
   height: 46px;
   line-height: 2.8;
   margin: 0 auto;
+  color: #7d7d7d;
+}
+
+.header-top-inner a {
+  color: #7d7d7d;
 }
 
 .around-st, .family-site, .sign-lang {
@@ -41,19 +52,36 @@ a { color: #666; }
 
 .around-st ul {
   overflow: hidden;
+  width: 810px;
 }
 
-.around-st li {
+.around-st ul li {
   float: left;
   margin: 0 12px;
+  position: relative;
+}
+
+.around-st ul li::after {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 14px;
+  top: 16px;
+  right: -11px;
+  background: rgba(209, 209, 209, 0.7);
 }
 
 .around-st li:nth-child(1) {
   margin-left: 0;
 }
 
+.around-st ul li:last-child::after {
+  top: 0;
+  bottom: 0;
+  height: 50px;
+}
+
 .family-site {
-  /* display: inline-block; */
   width: 400px;
   height: 46px;
 }
@@ -78,4 +106,53 @@ a { color: #666; }
 .weather {
   width: 220px;
   margin-left: 0;
+}
+
+#header-bottom {
+  width: 1400px;
+  height: 105px;
+  margin: 0 auto;
+  line-height: 105px;
+}
+
+.logo {
+  float: left;
+  position: relative;
+  top: 15%;
+}
+
+.gnb-wrap {
+  float: right;
+  width: 610px;
+}
+
+.gnb {
+  float: left;
+}
+
+.gnb ul {
+  overflow: hidden;
+}
+
+.gnb ul li {
+  float: left;
+  margin-right: 10px;
+  color: #1a1a1a;
+}
+
+.right-gnb {
+  float: right;
+  margin-left: 20px;
+}
+
+.right-gnb ul {
+  overflow: hidden;
+}
+
+.right-gnb ul li {
+  float: left;
+}
+
+.right-gnb ul li:nth-child(2) {
+  margin-left: 10px;
 }
