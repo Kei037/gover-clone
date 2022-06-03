@@ -242,12 +242,12 @@ a { color: #666; }
 /* GNB 부분 */
 .gnb-wrap {
   float: right;
-  width: 730px;
+  width: 800px;
+  display: flex;
 }
 
 .gnb {
-  float: left;
-  width: 610px;
+  width: 660px;
 }
 
 .gnb ul {
@@ -260,14 +260,26 @@ a { color: #666; }
 .gnb > ul > li {
   float: left;
   color: #1a1a1a;
-  width: 16.66%;
+  width: 14.66%;
   font-size: 20px;
+  margin-right: 10px;
   text-align: center;
 }
 
 .maintxt {
   position: relative;
   color: #1a1a1a;
+}
+
+.maintxt:hover::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: -5px;
+  right: -25px;
+  background: url('../img/arrow_orange.png');
+  transition: 0.3s;
 }
 
 .submenu-inner {
@@ -278,64 +290,110 @@ a { color: #666; }
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 700px;
+  height: 1000px;
   font-size: 16px;
   background: #fff;
 }
 
+.submenu-inner.test {
+  display: none;
+}
+
 .submenu-inner > ul {
-  /* display: flex;
-  flex-wrap: wrap; */
-  overflow: hidden;
   width: 1400px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .submenu-inner > ul > li {
-  padding: 20px 10px 20px;
+  padding: 20px 10px 0;
   box-sizing: border-box;
   width: 18%;
-  height: 300px;
+  min-height: 330px;
   float: left;
+  line-height: 40px;
+}
+
+/* .submenu-inner > ul > li:nth-child(7) {
+  width: 40%;
+} */
+
+.submenu-inner > ul > .long-submenu {
+  width: 29%;
 }
 
 .subtxt {
+  display: block;
+  height: 40px;
+  line-height: 1.7;
   border: 1px solid #c5c9d6;
   border-radius: 4px;
-  padding: 5px 10px 5px 5px;
+  padding: 5px 30% 5px 5px;
+  margin-bottom: 10px;
   box-sizing: border-box;
+  position: relative;
+}
+
+.subtxt::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: 1px;
+  right: 3px;
+  transform: rotate(180deg);
+  background: url('../img/arrow.png');
+}
+
+.subtxt:hover {
+  border-color: rgb(55,159,255);
 }
 
 .submenu {
-
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+  vertical-align: top;
 }
 
-.submenu ul {
+.submenu {
   height: 250px;
 }
 
-.long-submenu {
-  width: 40%;
-}
-
-.long-submenu ul {
-}
-
-.long-submenu ul li {
-}
-
 .sub-list {
-  height: 20px;
+  /* background: red; */
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+
+.long-list {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.long-submenu > li {
+  width: 50%;
 }
 
 .sub-list a {
   font-size: 15px;
+  position: relative;
+  padding-left: 10px;
 }
 
-
-
-
-
+.sub-list a::before {
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 8px;
+  left: 0;
+  background: #c5c9d6;
+}
 
 .right-gnb {
   float: left;
